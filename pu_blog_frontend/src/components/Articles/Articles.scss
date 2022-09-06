@@ -1,0 +1,112 @@
+@import "/src/styles/variables";
+
+.articles-container {
+  .load-more-container {
+    @include hasMoreTxt;
+  }
+
+  .no-more-container {
+    @include noMoreTxt;
+  }
+
+}
+
+article{
+
+  opacity: 0.8;
+  &:hover{
+    opacity: 1;
+  }
+
+  transition: all 0.1s;
+}
+.article-box {
+
+  &:hover{
+    //border:1px solid rgba(74, 177, 218, 0.73);
+
+  }
+
+  @include boxShadow;
+
+  background: #ffffff;
+  margin-bottom: 20px;
+
+  transition: all 0.1s ease-in;
+  display: flex;
+  padding: 1rem;
+  border: 1px solid #fff;
+  font-size: 0.95rem;
+  align-items: start;
+  cursor: pointer;
+  border-radius: 2px;
+
+  .box-image {
+  }
+
+  .box-text {
+
+    margin-left: 15px;
+
+    .box-text-title {
+
+
+      h3 {
+        max-width: 550px;
+        margin-bottom: 10px;
+        color: $textColor3;
+        font-size: 20px;
+
+        @include textOneLine;
+
+        transition: all linear 0.1s;
+
+        //&:hover {
+        //  color: $textHoverColor;
+        //  cursor: pointer;
+        //}
+      }
+    }
+
+    .box-text-summary {
+      height: 65px;
+
+      p {
+        max-width: 550px;
+        color: $textColor2;
+        font-size: 14.5px;
+        @include textNumberLine(3);
+
+      }
+    }
+
+
+    .box-text-info {
+
+
+      ul {
+        display: flex;
+        //justify-content: space-around;
+        li {
+          margin-right: 20px;
+          color: $textColor;
+          font-size: 13px;
+
+          i {
+            margin-right: 5px;
+          }
+        }
+
+        .author span,
+        .type span {
+          cursor: pointer;
+
+          &:hover {
+            color: $textHoverColor3;
+          }
+        }
+      }
+    }
+  }
+}
+

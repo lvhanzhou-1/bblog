@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+<body>
+<h1 style="text-align: center">授权成功</h1>
+<!--<h4><%= token %></h4>-->
+
+<br/>
+
+<h1 id="move">关闭中...</h1>
+
+<!--<br/>-->
+
+<!--<h1><a id="move-now" href="http://localhost:8080"></a></h1>-->
+<script>
+    window.onload = function () {
+        setTimeout(() => {
+
+            // console.info("🚀 ~ file:oauthSuccess method: line:16 -----parent.location.href",parent.location.href )
+            // console.info("🚀 ~ file:oauthSuccess method: line:16 -----parent.location",parent.location )
+            // console.info("🚀 ~ file:oauthSuccess method: line:16 -----parent",parent )
+            // window.opener.postMessage(`<%= token %>`, '*')
+            // console.info("🚀 ~ file:oauthSuccess method: line:18 -----window.opener",window.opener )
+            window.opener.postMessage(`<%= token %>`, '*')
+            // let h = document.querySelector('#move')
+
+            setTimeout(()=>{
+                // window.open('http://localhost:8080', '_self')
+                window.close()
+            },1000)
+            // setTimeout(() => {
+            //     window.close()
+            // }, 500)
+           //  let a = document.querySelector('#move-now')
+           // setTimeout(()=>{
+           //     a.innerText = '点击直接跳转'
+           // },1000)
+
+
+        //     let h = document.querySelector('#move')
+        //     let time = 4
+        //     let timer = setInterval(() => {
+        //         time -= 1
+        //         h.innerText = `${time}s后跳转到首页...`
+        //         if (time <= 0) {
+        //             clearInterval(timer)
+        //             window.open('http://localhost:8080', '_self')
+        //         }
+        //     }, 1000)
+        //
+        //
+        }, 1000)
+    }
+
+
+</script>
+</body>
+</html>

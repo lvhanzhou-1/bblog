@@ -1,0 +1,13 @@
+/egg-blog-service/node_modules
+/egg-blog-service/logs
+/egg-blog-service/run
+/egg-blog-service/test
+/egg-blog-service/typings
+
+
+/pu_blog-admin/node_modules
+/pu_blog-admin/dist
+
+
+/pu_blog_frontend/node_modules
+/pu_blog_frontend/dist

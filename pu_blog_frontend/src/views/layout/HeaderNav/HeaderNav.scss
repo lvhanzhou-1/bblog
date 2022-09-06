@@ -1,0 +1,92 @@
+@import "../../../styles/variables";
+
+$headerHeight: 60px;
+
+.avator {
+  border: 2px rgb(114, 114, 114) solid;
+  border-radius: 5px;
+  background-color: #d0d0d0;
+}
+
+.header-nav-container {
+
+  @include w;
+  @include clearfix;
+
+  .nav-list {
+    float: left;
+
+    li {
+      height: $headerHeight;
+      line-height: $headerHeight;
+      width: auto;
+      padding: 0 20px;
+      display: inline-block;
+      transition: all linear 50ms;
+
+      &:hover{
+        color: rgba(106, 197, 234, 0.89);
+        cursor: pointer;
+        background-color: rgba(225, 225, 225, 0.75);
+      }
+
+      &:hover a{
+        color: rgba(106, 197, 234, 0.89);
+      }
+
+
+    }
+  }
+
+  .search,
+  .user-unlogin {
+    height: 60px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 700;
+    margin-left: 20px;
+  }
+
+  .user-login {
+    width: 45px;
+    height: 60px;
+    float: right;
+    cursor: pointer;
+    overflow: hidden;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+
+    .el-image {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+
+    }
+  }
+
+  .logo-box {
+    height: 60px;
+    float: left;
+    color: #00a7eb;
+    line-height: 60px;
+    margin-right: 50px;
+    cursor: pointer;
+    font-size: 22px;
+  }
+
+  ::v-deep .el-menu {
+    float: left;
+    height: 60px;
+    //background-color: hsla(0,0%,100%,.9);
+    .el-menu-item,
+    .el-submenu__title {
+      font-size: 16px !important;
+    }
+  }
+}

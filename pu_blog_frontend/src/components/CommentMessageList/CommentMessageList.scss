@@ -1,0 +1,227 @@
+@import "/src/styles/variables";
+
+$reportDialogWidth: 760px;
+$reportDialogHeight: 400px;
+$reportDialogHeaderHeight: 40px;
+$reportDialogFooterHeight: 60px;
+$dialogPadding: 20px;
+
+
+::v-deep .report-box {
+  .el-dialog__wrapper {
+    .report-comment-dialog {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: $reportDialogWidth !important;
+      height: $reportDialogHeight !important;
+      margin-top: -$reportDialogHeight / 2 !important;
+      margin-left: -$reportDialogWidth / 2 !important;
+      margin-bottom: 0 !important;
+      padding-bottom: $dialogPadding;
+      display: flex;
+      flex-direction: column;
+
+      .el-dialog__body {
+        flex: 1;
+        padding: $dialogPadding $dialogPadding 0;
+
+        h3 {
+          margin-bottom: $dialogPadding;
+        }
+      }
+
+      .el-dialog__header {
+        padding: 0 $dialogPadding;
+        height: $reportDialogHeaderHeight;
+        line-height: $reportDialogHeaderHeight;
+        position: relative;
+        border-bottom: 1px solid $textHoverColor4;
+
+        .el-dialog__headerbtn {
+          position: absolute;
+          top: 50%;
+          right: $dialogPadding;
+          transform: translateY(-50%);
+        }
+      }
+
+      .el-dialog__footer {
+        padding: 0 $dialogPadding;
+        height: $reportDialogFooterHeight;
+        line-height: $reportDialogFooterHeight;
+      }
+    }
+  }
+
+}
+
+.empty-box {
+  font-size: 30px;
+  text-align: center;
+}
+
+.message-container {
+  display: flex;
+  margin-bottom: 14px;
+  // 显示隐藏评论列表按钮
+  .vertical-line {
+    border-left: 1px solid $textColor7;
+    margin-top: 36px;
+    margin-right: 20px;
+    position: relative;
+
+    .minus-box {
+      position: absolute;
+      left: 0;
+      top: 0;
+      transform: translate(-50%, -100%);
+      font-size: 16px;
+      color: $textColor8;
+
+      &:hover {
+        color: $textHoverColor;
+      }
+    }
+  }
+
+  // 显示隐藏提示文字
+  .text-tips {
+    font-size: 16px;
+    height: 25px;
+    line-height: 30px;
+    margin-top: 10px;
+    cursor: pointer;
+    color: $textColor8;
+
+    &:hover {
+      color: $textHoverColor;
+    }
+  }
+
+  // 左侧头像
+  .left-profile {
+    width: 60px;
+
+    .avator {
+      //width: 65px;
+      //height: 65px;
+      position: relative;
+      //z-index: 99;
+      float: left;
+
+      border: 3px solid #FFF;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      border-radius: 4px;
+
+      -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+      -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+
+      overflow: hidden;
+    }
+  }
+
+  // 右侧内容
+  .comment-box {
+    max-width: 500px;
+    position: relative;
+    margin-left: 15px;
+    //margin-bottom: 14px;
+    //border-bottom: 1px solid #888888;
+
+    //&:before{
+    //  position: absolute;
+    //  content:"";
+    //  width: 0;
+    //
+    //  height: 0;
+    //  top: 8px;
+    //  left:-8px;
+    //  border-top: solid 8px transparent;
+    //  border-right: solid 8px #FCFCFC;
+    //  border-bottom: solid 8px transparent;
+    //
+    //
+    //
+    //}
+    .comment-head {
+      //background: #FCFCFC;
+      padding: 5px 13px;
+      overflow: hidden;
+      -webkit-border-radius: 4px 4px 0 0;
+      -moz-border-radius: 4px 4px 0 0;
+      border-radius: 4px 4px 0 0;
+
+
+
+      .comment-name {
+        color: #545454;
+        font-size: 13px;
+        font-weight: 700;
+        float: left;
+        margin-right: 8px;
+      }
+
+      // 角色标识
+      .label {
+        color: rgba(185, 70, 70, 0.76);
+        border: 1px solid #b94646;
+        //padding: 1px;
+        font-size: 10px;
+        border-radius: 2px;
+        margin-right: 8px;
+        cursor: default;
+        position: relative;
+      }
+
+
+
+      span {
+        float: left;
+        color: #999;
+        font-size: 10px;
+        position: relative;
+        //top: 1px;
+      }
+    }
+
+    .comment-content {
+      //background: #FFF;
+      padding: 5px;
+      font-size: 16px;
+      color: #595959;
+      -webkit-border-radius: 0 0 4px 4px;
+      -moz-border-radius: 0 0 4px 4px;
+      border-radius: 0 0 4px 4px;
+    }
+
+    i {
+
+      //float: right;
+      margin-left: 10px;
+      position: relative;
+      font-size: 14px;
+      //top: 2px;
+      color: #A6A6A6;
+      cursor: pointer;
+      -webkit-transition: color 0.3s ease;
+      -o-transition: color 0.3s ease;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: #03658c;
+      }
+    }
+
+  }
+}
+
+.load-more-container {
+  @include hasMoreTxt;
+}
+
+.no-more-container {
+  @include noMoreTxt;
+}

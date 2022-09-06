@@ -1,0 +1,9 @@
+@import "src/styles/variables";
+.about-me-box{
+  margin-top: 10px;
+  padding: 20px 70px 70px 70px;
+  width: 70%;
+  border-radius: 5px;
+  @include boxShadow;
+  background: #ffffff;
+}
